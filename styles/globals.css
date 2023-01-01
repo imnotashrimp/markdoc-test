@@ -93,11 +93,27 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  font-family: sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+}
+
+table {
+  margin-top: 1.5em;
+}
+
+td {
+  padding: 5px 20px;
+  margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
