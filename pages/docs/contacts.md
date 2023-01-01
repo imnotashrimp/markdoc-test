@@ -7,4 +7,4 @@ Showing output for: {% $markdoc.frontmatter.output %}
 
 # {% $markdoc.frontmatter.rpcMethod %}
 
-{% method %}
+{% method frontmatter=$markdoc.frontmatter %}

@@ -1,5 +1,5 @@
-export const Method = ({rpcMethod, output}) => {
-  return 'Method component called'
+export const Method = ({frontmatter}) => {
+  const {rpcMethod, output} = frontmatter;
 
   const arr = rpcMethod.split(/(?=[A-Z])/g);
 
@@ -8,6 +8,6 @@ export const Method = ({rpcMethod, output}) => {
       return <>arr.join(' ')</>;
     case 'velo':
       arr[0] = arr[0].toLowerCase();
-      return <>\`${arr.join('')}()\`</>;
+      return <>`${arr.join('')}()`</>;
   }
 }
