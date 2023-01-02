@@ -3,13 +3,14 @@ import ReactMarkdown from 'react-markdown';
 export const CodeExample = ({frontmatter}) => {
   const {restConfig, veloConfig, codeExamples, output, rpcMethod} = frontmatter;
   const {requestObj, responseObj} = codeExamples.basic;
-
+  
   if (output === 'rest') {
-    const constructedRequest = `curl -X POST \
-  '${restConfig.endpointUrl}' \
-  -H 'Authorization: <AUTH>' \
-  -H 'Content-Type: application/json' \
-  -data-binary '${requestObj}'`;
+    const {httpVerb, endpointUrl} = restConfig
+    const constructedRequest = `curl -X ${httpVerb} \\
+  '${endpointUrl}' \\
+  -H 'Authorization: <AUTH>' \\
+  -H 'Content-Type: application/json' ${requestObj ? '\\' : ''}
+  ${requestObj ? `-d ${requestObj}'` : ''}`;
 
     const returnVal = `### Request
 

@@ -1,6 +1,7 @@
 import { CodeExample } from "../components/CodeExample";
 import { Method } from "../components/Method";
 import { Velo } from "../components/Velo";
+import { Rest } from "../components/Rest";
 
 export const method = {
   render: Method,
@@ -14,7 +15,18 @@ export const method = {
 
 export const velo = {
   render: Velo,
-  children: ['paragraph', 'tag', 'list'],
+  children: ['paragraph', 'tag', 'list', 'inline'],
+  selfClosing: false,
+  attributes: {
+    frontmatter: {
+      type: Object
+    }
+  }
+}
+
+export const rest = {
+  render: Rest,
+  children: ['paragraph', 'tag', 'list', 'inline'],
   selfClosing: false,
   attributes: {
     frontmatter: {

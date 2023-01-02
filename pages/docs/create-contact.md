@@ -2,7 +2,8 @@
 rpcMethod: CreateContact
 output: velo
 restConfig:
-  endpointUrl: https://www.wixapis.com/contacts/v4/contacts
+  httpVerb: POST
+  endpointUrl: https://www.wixapis.com/contacts/v4/contacts/
 veloConfig:
   module: wix-crm-backend
   submodule: contacts
