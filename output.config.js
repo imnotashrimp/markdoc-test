@@ -1,4 +1,5 @@
 module.exports = {
   // rest or velo
-  target: 'rest'
+  target: 'rest',
+  internal: true
 }

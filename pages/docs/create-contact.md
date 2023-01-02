@@ -58,6 +58,33 @@ with an email already used by another contact,
 the new contact won't be created.
 To override this behavior, set the `allowDuplicates` option to `true`.
 
-### Code example
+{% internal %}
+
+## Internal notes
+
+Dude. DUDE. You can now have internal notes
+alongside the external stuff.
+
+{% /internal %}
+
+## Code example
 
 {% codeExample frontmatter=$markdoc.frontmatter /%}
+
+## Params
+
+{% table %}
+* Property
+* Type
+* Description
+---
+* `picture`
+* object
+*
+  Reserved for internal use.
+
+  {% internal %}
+  We deprecated this field for TPAs in 2022.
+  We'll continue to support it internally until June 30, 2023.
+  {% /internal %}
+{% /table %}
