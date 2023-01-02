@@ -1,6 +1,5 @@
 ---
 rpcMethod: GetContact
-output: rest
 restConfig:
   httpVerb: GET
   endpointUrl: https://www.wixapis.com/contacts/v4/contacts/{contactId}
@@ -26,8 +25,6 @@ codeExamples:
         }
       }
 ---
-
-Showing output for: {% $markdoc.frontmatter.output %}
 
 # {% method frontmatter=$markdoc.frontmatter /%}
 

@@ -34,8 +34,6 @@ codeExamples:
       }
 ---
 
-Showing output for: {% $markdoc.frontmatter.output %}
-
 # {% method frontmatter=$markdoc.frontmatter /%}
 
 Creates a new contact.
@@ -74,9 +72,6 @@ alongside the external stuff.
 ## Params
 
 {% table %}
-* Property
-* Type
-* Description
 ---
 * `picture`
 * object

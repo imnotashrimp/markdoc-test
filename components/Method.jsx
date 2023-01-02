@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+const {target} = require('../output.config');
 
 export const Method = ({frontmatter}) => {
-  const {rpcMethod, output} = frontmatter;
+  const {rpcMethod} = frontmatter;
 
   const arr = rpcMethod.split(/(?=[A-Z])/g);
   let response;
 
-  switch (output) {
+  switch (target) {
     case 'rest':
        response = arr.join(' ');
        break;
@@ -17,5 +18,5 @@ export const Method = ({frontmatter}) => {
       break;
   }
 
-  return <ReactMarkdown>{response}</ReactMarkdown>
+  return <ReactMarkdown children={response} />
 }
