@@ -1,5 +1,7 @@
-export const Rest = ({frontmatter, children}) => {
-  if (frontmatter.output !== 'rest') return;
+const {target} = require('../output.config');
+
+export const Rest = ({children}) => {
+  if (target !== 'rest') return;
 
   return <>{children}</>
 }

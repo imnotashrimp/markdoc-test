@@ -1,10 +1,11 @@
 import ReactMarkdown from 'react-markdown';
+const {target} = require('../output.config');
 
 export const CodeExample = ({frontmatter}) => {
-  const {restConfig, veloConfig, codeExamples, output, rpcMethod} = frontmatter;
+  const {restConfig, veloConfig, codeExamples, rpcMethod} = frontmatter;
   const {requestObj, responseObj} = codeExamples.basic;
   
-  if (output === 'rest') {
+  if (target === 'rest') {
     const {httpVerb, endpointUrl} = restConfig
     const constructedRequest = `curl -X ${httpVerb} \\
   '${endpointUrl}' \\
@@ -29,7 +30,7 @@ ${responseObj}
     </>
   }
 
-  if (output === 'velo') {
+  if (target === 'velo') {
     const {module: MODULE, submodule: SUBMODULE, params: PARAMS, responseObjName: ENTITY_NAME} = veloConfig;
     const fnNameArr = rpcMethod.split(/(?=[A-Z])/g);
     fnNameArr[0] = fnNameArr[0].toLowerCase();

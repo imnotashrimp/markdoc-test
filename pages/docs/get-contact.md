@@ -35,7 +35,7 @@ Gets a contact.
 
 ## **Description**
 
-{% velo frontmatter=$markdoc.frontmatter %}
+{% velo %}
 {% method frontmatter=$markdoc.frontmatter /%}
 returns a Promise that resolves to the retrieved contact.
 {% /velo %}
@@ -54,13 +54,13 @@ In both cases, the target contact is returned.
 This is supported only when calling
 {% method frontmatter=$markdoc.frontmatter /%},
 and only for merged contacts.
-{% rest frontmatter=$markdoc.frontmatter %}Deleted source contact IDs are not supported on any other endpoint.{% /rest %}
-{% velo frontmatter=$markdoc.frontmatter %}Deleted source contact IDs are not supported on any other function.{% /velo %}
+Deleted source contact IDs are not supported on any other
+{% rest %}endpoint.{% /rest %}{% velo %}function.{% /velo %}
 
 &nbsp;
 
 
-{% velo frontmatter=$markdoc.frontmatter %}
+{% velo %}
 
 > Notes:
 >

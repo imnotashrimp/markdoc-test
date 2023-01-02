@@ -1,6 +1,5 @@
 ---
 rpcMethod: CreateContact
-output: velo
 restConfig:
   httpVerb: POST
   endpointUrl: https://www.wixapis.com/contacts/v4/contacts/
@@ -43,7 +42,7 @@ Creates a new contact.
 
 ## **Description**
 
-{% velo frontmatter=$markdoc.frontmatter %}
+{% velo %}
 {% method frontmatter=$markdoc.frontmatter /%}
 returns a Promise that resolves to a new contact.
 {% /velo %}
