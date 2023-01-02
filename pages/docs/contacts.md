@@ -1,9 +1,16 @@
 ---
 rpcMethod: CreateContact
-output: velo
+output: rest
+restConfig:
+  endpointUrl: https://www.wixapis.com/contacts/v4/contacts
+veloConfig:
+  module: wix-crm-backend
+  submodule: contacts
+  params: contact, options
+  responseObjName: contact
 codeExamples:
   basic:
-    request: >
+    requestObj: >
       {
         "contact": {
           "info": {
@@ -14,7 +21,7 @@ codeExamples:
           }
         }
       }
-    response: >
+    responseObj: >
       {
         "contact": {
           "info": {
@@ -53,3 +60,4 @@ To override this behavior, set the `allowDuplicates` option to `true`.
 
 ### Code example
 
+{% codeExample frontmatter=$markdoc.frontmatter /%}
