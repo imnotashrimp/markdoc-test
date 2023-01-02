@@ -17,5 +17,5 @@ export const Method = ({frontmatter}) => {
       break;
   }
 
-  return <ReactMarkdown children={response} />
+  return <ReactMarkdown>{response}</ReactMarkdown>
 }
