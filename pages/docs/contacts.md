@@ -1,6 +1,6 @@
 ---
 rpcMethod: CreateContact
-output: rest
+output: velo
 restConfig:
   endpointUrl: https://www.wixapis.com/contacts/v4/contacts
 veloConfig:
@@ -10,7 +10,7 @@ veloConfig:
   responseObjName: contact
 codeExamples:
   basic:
-    requestObj: >
+    requestObj: >-
       {
         "contact": {
           "info": {
@@ -21,7 +21,7 @@ codeExamples:
           }
         }
       }
-    responseObj: >
+    responseObj: >-
       {
         "contact": {
           "info": {
