@@ -18,11 +18,11 @@ It doesn't:
 
 ## To play with the demo
 
-1. Clone this repo: `git clone imnotashrimp/markdoc-test`.
+1. Clone this repo: `git clone https://github.com/imnotashrimp/markdoc-test.git`.
 2. `cd` to `markdoc-test` and run `npm install`.
 3. Start the server: `npm run dev`.
 
-You can then point your browser to `localhost:3000` to see the contacts pages.
+You can then point your browser to `localhost:3000/docs/<PAGE>` to see a sample page. Replace `<PAGE>` with the base filename of a markdown file in the folder `/pages/docs`. For example, to render `/pages/docs/create-contact.md`, go to `localhost:3000/docs/create-contact`.
 
 To live-change the content:
 
